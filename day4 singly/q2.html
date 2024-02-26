@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    function singly(value){
+        this.value=value
+        this.next=null
+    }
+
+    const s1 = new singly(8787)
+    const s2 = new singly(564)
+    const s3 = new singly(959)
+    const s4 = new singly(8457)
+    const s5 = new singly(5652)
+    const s6 = new singly(87)
+
+
+    s1.next = s2
+    s2.next = s3
+    s3.next = s4
+    s4.next = s5
+    s5.next = s6
+
+
+    let cull = s1
+
+    while(cull != null){
+        console.log(cull.value)
+        cull =  cull.next
+    }
+</script>
