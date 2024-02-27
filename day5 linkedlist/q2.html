@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function car(value){
+         this.value = value
+         this.next = null
+    }
+
+    const ca1 = new car(1)
+    const ca2 = new car(2)
+    const ca3 = new car(3)
+    const ca4 = new car(4)
+    const ca5 = new car(5)
+    const ca6 = new car(6)
+
+    const ca7 = new car(7) 
+
+    ca1.next=ca2
+    ca2.next=ca3
+    ca3.next=ca4
+    ca4.next=ca5
+    ca5.next=ca6
+
+    ca4.next=ca7
+    ca7.next=ca5
+
+    let node=ca1
+
+    while(node != null){
+        console.log(node.value)
+        node=node.next
+    }
+</script>

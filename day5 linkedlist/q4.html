@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function get(value){
+        this.value=value
+        this.next= null
+    }
+
+    const gt1 = new get(21)
+    const gt2 = new get(22)
+    const gt3 = new get(23)
+    const gt4 = new get(24)
+    const gt5 = new get(25)
+
+    const gt6 = new get(26)
+
+    gt1.next=gt2
+    gt2.next=gt3
+    gt3.next=gt4
+    gt4.next=gt5
+
+    gt1.next=gt6
+    gt6.next=gt2
+
+    let song = gt1
+
+    while(song != null){
+        console.log(song.value)
+        song = song.next
+    }
+</script>

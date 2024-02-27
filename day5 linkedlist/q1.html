@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    function node(value){
+        this.value = value
+        this.next = null
+    }
+
+    const nd1 = new node(45)
+    const nd2 = new node(46)
+    const nd3 = new node(47)
+    const nd4 = new node(48)
+    const nd5 = new node(49)
+
+    const nd6 = new node(50)
+    const nd7 = new node(51)
+
+    nd1.next = nd2 
+    nd2.next = nd3
+    nd3.next = nd4
+    nd4.next = nd5
+
+    nd3.next = nd6
+    nd6.next = nd7
+    nd7.next = nd4
+
+    let curr = nd1
+
+    while(curr != null){
+        console.log(curr.value)
+        curr = curr.next
+    }
+
+
+    
+
+</script>

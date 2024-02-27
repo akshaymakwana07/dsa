@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    function toy(value){
+        this.value=value
+        this.next= null
+    }
+
+
+    const ty1 = new toy(11)
+    const ty2 = new toy(12)
+    const ty3 = new toy(13)
+    const ty4 = new toy(14)
+    const ty5 = new toy(15)
+
+
+    ty1.next = ty3
+    ty3.next = ty4
+    ty4.next = ty5
+
+    curr = ty1 
+
+    while(curr != null){
+        console.log(curr.value)
+        curr = curr.next
+    }
+</script>
