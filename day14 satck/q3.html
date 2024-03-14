@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let wm = new WeakMap()
+
+
+let obj1 = {"name": "marvel"}
+let obj2 = {"name": "dc"}
+let obj3 = {"name": "holiwood"}
+
+wm.set(obj1,"private")
+wm.set(obj2,"private")
+wm.set(obj3,"private")
+
+wm.delete(obj2)
+console.log(wm.has(obj3))
+
+console.log(wm)
+</script>

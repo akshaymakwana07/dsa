@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let ws = new WeakSet()
+
+
+    let obj1 = {"name": "marvel"}
+    let obj2 = {"name": "dc"}
+    let obj3 = {"name": "holiwood"}
+
+    ws.add(obj1)
+    ws.add(obj2)
+    ws.add(obj3)
+
+    ws.delete(obj1)
+
+    console.log(ws)
+</script>
