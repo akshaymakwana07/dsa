@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    class stack{
+
+        constructor(){
+            this.stack = []
+        }
+
+    
+        push(element){
+            this.stack.push(element)
+        }
+    }
+
+    let nums= new stack
+
+    let arr = [1,2,3,4,5]
+
+    function stk(k1){
+        let stk = (Math.max(...k1));
+        for(let i=0; i<k1.length; i++){
+            nums.push(arr[i] == stk ? -1 : arr[i] + 1);
+        }
+        return nums.stack
+    }
+
+    console.log(stk(arr))
+
+
+
+
+
+</script>
+   
+</script>
