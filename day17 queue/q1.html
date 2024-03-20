@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    class Queue {
+        constructor(){
+            this.s1 =[]
+            this.s2 =[]
+        }
+        enqueue(k){
+            while(this.s1.length != 0){
+                this.s2.push(this.s1.pop())
+            }
+            this.s1.push(k)
+            while(this.s2.length != 0){
+                this.s1.push(this.s2.pop())
+            }
+
+        }
+
+        dequeue(){
+
+            if(this.s1.length == 0){
+                return -1
+            }
+
+            let k = this.s1[this.s1.length-1]
+            this.s1.pop()
+            return k
+        }
+    }
+
+    let qu = new Queue
+
+    qu.enqueue(1)
+    qu.enqueue(2)
+    qu.enqueue(3)
+    qu.enqueue(4)
+
+
+    console.log(qu)
+
+    console.log(qu.dequeue())
+    console.log(qu.dequeue())
+    console.log(qu.dequeue())
+    console.log(qu.dequeue())
+   
+</script>
