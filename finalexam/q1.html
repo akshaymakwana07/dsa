@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let nums = [2,7,11,15]
+    let target = 9  
+
+    function input(nums,target){
+        let toy = 0
+        let change = []
+        for (let i = 0; i < nums.length; i++) {
+            if(toy == target){
+                break
+            }else{
+                toy += nums[i]
+                change.push(i)
+            }
+        }
+        return change;
+    }
+    console.log(input(nums , target));
+</script>
